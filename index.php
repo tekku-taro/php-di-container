@@ -13,9 +13,9 @@ class ClassA
         $this->var = $var1;
     }
 
-    public function execRun(ClassC $c)
+    public function execRun(ClassC $c, $time = null)
     {
-        $c->run();
+        $c->run($time);
     }
 }
 

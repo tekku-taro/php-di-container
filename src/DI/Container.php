@@ -65,7 +65,7 @@ class Container
         $rawdata = include($configPath);
         
         if (empty($rawdata)) {
-            throw new ErrorException('コンフィグファイルが読み込めません！');
+            throw new ErrorException('config.php cannot be read.');
         }
 
         // services インスタンス非共有
@@ -204,11 +204,14 @@ class Container
             throw new ErrorException('$instance is not an object!');
         }
 
+        //インスタンスのリフレクションメソッドを取得
         $reflectionClass = new ReflectionClass($instance);
         $reflectionMethod = $reflectionClass->getMethod($method);
 
+        // メソッドのパラメータ依存解決
         $resolvedParams = $this->resolveParamters($reflectionMethod, $params);
 
+        // メソッドを実行して結果を返す
         return call_user_func_array([$instance, $method], $resolvedParams);
     }
 

@@ -19,10 +19,6 @@ namespace Taro\DI;
  *      $c = new \ClassC();
  *      $a->execRun($c);
  * },
-
-
-
- *
  *
  */
 return [
