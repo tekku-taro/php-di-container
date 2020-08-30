@@ -104,5 +104,3 @@ return [
 **Php DI Container**は[MIT license](https://opensource.org/licenses/MIT)のもとで公開されています。
 
 **Php DI Container** is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-@author tekku-taro @2020

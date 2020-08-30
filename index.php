@@ -37,8 +37,11 @@ class ClassC
     {
         echo 'ClassC has been created.' . PHP_EOL;
     }
-    public function run($time = '60')
+    public function run($time = null)
     {
+        if (is_null($time)) {
+            $time = 60;
+        }
         echo 'ClassC\'s method run is called' . PHP_EOL;
         echo 'time:'. $time . PHP_EOL;
     }

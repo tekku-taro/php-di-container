@@ -252,4 +252,14 @@ class Container
 
         return $resolvedParams;
     }
+
+    /**
+     * get storage array
+     *
+     * @return array
+     */
+    public function getStorage()
+    {
+        return $this->storage;
+    }
 }
